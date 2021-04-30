@@ -7,7 +7,6 @@
 
 <!-- Script = JS, zone où l'on va mettre les méthodes utiles sur la page (appels API, animations, validations, etc...) -->
 <script>
-import axios from "../tools/axios";
 import { testApi } from "../services/test.service";
 
 export default {

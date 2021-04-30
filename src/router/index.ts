@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
-import Test from '../views/Test.vue'
+import TheaterMovies from '../views/Cinema/TheaterMovie/TheaterMovies.vue'
+import AddTheaterMovie from '../views/Cinema/TheaterMovie/AddTheaterMovie.vue'
+import Movies from '../views/Cinema/Movies.vue'
+import AddMovie from '../views/Cinema/Movie/AddMovie.vue'
+import MovieDetails from '../views/Cinema/Movie/MovieDetails.vue'
 
 Vue.use(VueRouter)
 
@@ -9,7 +12,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: TheaterMovies
   },
   {
     path: '/about',
@@ -18,12 +21,42 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/theater/movies',
+    name: 'TheaterMovies',
+    component: TheaterMovies
   }, 
   {
-    path: '/test', 
-    name: 'Test',
-    component: Test
-  }
+    path: '/theater/movie/add',
+    name: 'AddTheaterMovie',
+    component: AddTheaterMovie,
+    props: true
+  }, 
+  {
+    path: '/theater/movie/edit/:theaterMovieId',
+    name: 'EditTheaterMovie',
+    component: AddTheaterMovie,
+    props: true
+  }, 
+  {
+    path: '/movies',
+    name: 'Movies',
+    component: Movies
+  }, 
+  {
+    path: '/movie/add',
+    name: 'AddMovie',
+    component: AddMovie,
+    props: true
+  }, 
+  {
+    path: '/movie/:movieId',
+    name: 'MovieDetails',
+    component: MovieDetails,
+    props: true
+  }, 
+
 ]
 
 const router = new VueRouter({
