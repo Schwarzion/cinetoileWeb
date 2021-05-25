@@ -6,6 +6,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { BootstrapVue } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -16,6 +19,8 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+Vue.use(BootstrapVue)
 
 Vue.use(VCalendar, {
   componentPrefix: 'vc'  // Use <vc-calendar /> instead of <v-calendar />

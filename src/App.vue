@@ -17,7 +17,6 @@
 </template>
 
 <style lang="scss">
-
 //Global css classes (Reusable through all of the application)
 #app {
   font-family: "Roboto", sans-serif;
@@ -43,68 +42,68 @@
   }
 }
 
-.link{
+.link {
   text-decoration: none;
   color: #454545;
 }
 
-.add-icon{
-  color:#580115;
+.add-icon {
+  color: #580115;
   margin-right: 8px;
 }
 
 //Buttons classes
-.info-btn{
+.info-btn {
   border: none;
   background-color: #580115;
   border-radius: 8px;
-  color: #EAEAEA;
+  color: #eaeaea;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding: 8px;
   cursor: pointer;
 }
 
-.edit-btn{
+.edit-btn {
   color: #454545;
   margin-right: 16px;
 }
 
-.delete-btn{
+.delete-btn {
   cursor: pointer;
   color: #580115;
 }
 
 //Forms classes
-.form-field{
+.form-field {
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.form-label{
+.form-label {
   display: inline-block;
-  font-size: 20px;  
+  font-size: 20px;
   font-weight: bold;
-  color: #707070
+  color: #707070;
 }
 
-.form-input{
+.form-input {
   width: 50%;
   height: 24px;
   border: none;
   border-radius: 8px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   color: #454545;
 }
 
-.form-add-btn{
+.form-add-btn {
   margin-top: 16px;
   border: none;
   background-color: #580115;
   border-radius: 8px;
-  color: #EAEAEA;
+  color: #eaeaea;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding: 8px;
