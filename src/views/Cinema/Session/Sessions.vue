@@ -48,7 +48,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 //Components & methods imports
-import SessionList from "@/components/sessions/SessionList.vue";
+import SessionList from "@/components/sessions/SessionList";
 import { getSessions } from "../../../services/session.service";
 
 //Add icons to fontAwesome library
@@ -57,7 +57,7 @@ library.add(faPlusCircle);
 export default {
   components: { SessionList },
 
-  data() {
+  data: function () {
     return {
       date: new Date(),
       sessions: [],

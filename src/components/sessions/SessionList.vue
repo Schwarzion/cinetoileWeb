@@ -18,11 +18,14 @@
         <td>{{session.room}}</td>
         <td>{{session.reservationNumber}}
           <router-link
-            :to="{ name: 'Reservations', params: { sessionId: session.id } }"
+            :to="{ name: 'Reservations', params: { session: session } }"
             class="edit-btn"
           >Voir</router-link>
         </td>
-        <td class="actions"><button>modifier</button><button>supprimer</button></td>
+        <td class="actions">
+          <button>modifier</button>
+          <button>supprimer</button>
+        </td>
       </tr>
     </table>
   </div>
