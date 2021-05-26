@@ -1,5 +1,6 @@
 <template>
   <div class="reservation-list">
+
     <table>
       <tr>
         <th>Id de réservation</th>
@@ -48,7 +49,10 @@ export default {
     async editStatus(id, status) {
       status === 1 ? (status = 0) : (status = 1);
       const res = await editReservationStatus(id, status);
-      if (res.status == 200) {
+      if (res.status !== 200) {
+        alert(`Request Status : ${res.status}\n
+        Error : ${res.data}`);
+      } else {
         this.reservations.map((reservation) =>
           reservation.id === id ? res.data : reservation
         );

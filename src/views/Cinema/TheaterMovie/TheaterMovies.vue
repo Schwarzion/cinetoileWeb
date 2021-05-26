@@ -44,7 +44,6 @@ export default {
   },
 
   beforeMount() {
-    console.log("before theatermovies");
     //TODO: Récupérer l'id du cinéma connecté actuellement
     this.getMoviesFromTheater(2);
   },

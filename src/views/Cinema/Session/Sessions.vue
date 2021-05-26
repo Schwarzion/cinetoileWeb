@@ -16,7 +16,7 @@
       </router-link>
     </div>
     <vc-date-picker
-      id="session-date-picker"
+      class="session-date-picker"
       v-model="date"
       mode="date"
       is24hr
@@ -39,6 +39,7 @@
       id="noSession"
       v-else
     >Pas de séances pour ce jour</p>
+    <v-dialog />
   </div>
 </template>
 
@@ -64,7 +65,7 @@ export default {
     };
   },
 
-  beforeMount() {
+  beforeMount: function () {
     this.getSessions();
   },
 
@@ -76,7 +77,7 @@ export default {
       const res = await getSessions(queryDate);
       this.sessions = res.data;
     },
-    dayClicked(day) {
+    dayClicked: function (day) {
       this.date = day.date;
       this.getSessions();
     },
@@ -103,8 +104,11 @@ export default {
       font-size: 1.5em;
     }
   }
-  vc-date-picker {
-    text-align: center;
+
+  .session-date-picker {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
   }
 
   #noSession {

@@ -45,7 +45,6 @@ export default {
   },
 
   beforeMount() {
-    console.log("before movies");
     this.getMovies();
   },
 

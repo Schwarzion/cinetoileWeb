@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -36,3 +38,5 @@ Vue.use(VueLuxon, {
     format: 'iso'
   },
 });
+
+Vue.use(Buefy)

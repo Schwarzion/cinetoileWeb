@@ -23,8 +23,7 @@
           >Voir</router-link>
         </td>
         <td class="actions">
-          <button>modifier</button>
-          <button>supprimer</button>
+          <button v-on:click="deleteSession(session.id)">supprimer</button>
         </td>
       </tr>
     </table>
@@ -35,6 +34,7 @@
 //Fontawesome imports
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { deleteSession } from "../../services/session.service";
 
 //Add icons to fontAwesome library
 library.add(faEdit, faTrashAlt);
@@ -46,7 +46,11 @@ export default {
     return {};
   },
 
-  methods: {},
+  methods: {
+    async deleteSession(id) {
+      await deleteSession(id, 2);
+    },
+  },
 };
 </script>
 

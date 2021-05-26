@@ -31,10 +31,13 @@ export default {
   methods: {
     async getReservations(sessionId) {
       const res = await getReservations(sessionId);
-      this.reservations = res.data;
+      if (res.status !== 200) {
+        alert(`Request Status : ${res.status}\n
+        Error : ${res.data}`);
+      } else this.reservations = res.data;
     },
 
-    goBack() {
+    goBack: function () {
       this.$router.go(-1);
     },
   },

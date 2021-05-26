@@ -60,8 +60,7 @@ const routes: Array<RouteConfig> = [
     props: true
   },
   { path: '/theater/sessions', name: 'Sessions', component: Sessions },
-  { path: '/theater/session/add', name: 'AddSession', component: SessionAdd, props: true },
-  { path: '/theater/session/edit', name: 'EditSession', component: SessionAdd, props: true },
+  { path: '/theater/session/add', name: 'AddSession', component: SessionAdd},
   { path: '/theater/sessions/reservations', name: 'Reservations', component: Reservations, props: true }
 ]
 
