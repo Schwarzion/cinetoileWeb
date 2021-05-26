@@ -92,12 +92,10 @@ export default {
     async getMovies() {
       const res = await getEnabledMoviesFromTheater(1);
       this.movies = res.data;
-      console.log(this.movies);
     },
     async getRooms() {
       const res = await getRooms(1);
       this.rooms = res.data;
-      console.log(this.rooms);
     },
     checkForm: function () {
       this.errors = [];
@@ -111,7 +109,6 @@ export default {
         roomId: this.room,
         time: this.date,
       };
-      console.log(newSession);
       this.checkForm();
       if (this.errors.length == 0) {
         await addSession(newSession);
