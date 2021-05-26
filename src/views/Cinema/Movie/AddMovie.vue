@@ -127,14 +127,12 @@ import { addMovie, uploadPoster } from '../../../services/movie.service';
           country: this.country
         }
 
-        console.log(newMovie);
         this.checkForm();
           
         //Check des erreurs dans le formulaire
         if(this.errors.length > 0){
           return false;
         } else {
-          console.log(newMovie);
           await addMovie(newMovie);
         
           //Redirection

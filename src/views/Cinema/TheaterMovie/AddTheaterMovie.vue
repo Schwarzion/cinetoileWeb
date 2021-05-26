@@ -73,7 +73,6 @@ export default {
           this.$router.push('/theater/movies')
         }
       } catch(error){
-        console.log(error);
       }
     },
   },

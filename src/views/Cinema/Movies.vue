@@ -45,14 +45,12 @@ export default {
   },
 
   beforeMount() {
-    console.log("before movies");
     this.getMovies();
   },
 
   methods: {
     async getMovies() {
       const res = await getMovies();
-      console.log(res.data);
       this.movies = res.data;
     },
   },
